@@ -11,8 +11,8 @@ from tensorflow.keras.models import load_model
 @st.cache(allow_output_mutation=True)
 def load_model_and_class_names():
     """ Load model and class_names"""
-    model = load_model("https://github.com/Zartrock/classification-d-images/blob/main/transfert_xception_model.h5", compile=False)
-    class_names = pickle.load(open("https://github.com/Zartrock/classification-d-images/blob/main/class_names.save", "rb"))
+    model = load_model("transfert_xception_model.h5", compile=False)
+    class_names = pickle.load(open("class_names.save", "rb"))
     return model, class_names
 
 def load_image(img):
